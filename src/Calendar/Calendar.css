@@ -1,0 +1,105 @@
+.date-controls {
+    display: flex;
+    justify-content: center;
+}
+
+.control-arrow {
+    font-size: calc(20px + 2.5vmin);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.month-navigate-btn {
+    cursor: pointer;
+}
+
+.date-header {
+    text-transform: capitalize;
+    font-weight: 600;
+    font-size: calc(20px + 4vmin);
+    font-family: sans-serif;
+    min-width: 25%;
+}
+
+.year-header {
+    font-size: calc(20px + 2vmin);
+    color: #5A5A5A;
+}
+
+.month-container {
+    max-width: 80%;
+    margin: auto;
+    margin-top: 3vh;
+}
+
+.day-of-week {
+    text-transform: uppercase;
+    padding-top: 2px;
+    padding-bottom: 1px;
+}
+
+.day-cell {
+    min-height: 10vh;
+}
+
+.day-number {
+    display: flex;
+    justify-content: start;
+    padding-left: 4px;
+    padding-top: 2px;
+}
+
+.work-day-color {
+    color: black;
+}
+
+.off-day-color {
+    color: #FF2E2E;
+}
+
+.other-month-off-day-color {
+    color: #ffcccb;
+}
+
+.other-month-work-day-color {
+    color: #d3d3d3;
+}
+
+.day-content {
+    padding-top: 2px;
+    padding-bottom: 2px;
+}
+
+/*
+    Responsive table.
+    Took from: https://css-tricks.com/accessible-simple-responsive-tables/
+*/
+
+.Rtable {
+    display: flex;
+    flex-wrap: wrap;
+    padding: 0;
+    border: solid 1px black;
+}
+
+.Rtable-cell {
+    box-sizing: border-box;
+    flex-grow: 1;
+    width: 100%;  
+    /* padding: 0.8em 1.2em; */
+    overflow: hidden; 
+    list-style: none;
+    border: solid 1px black;
+    background: white;
+}
+
+/* Table column sizing
+================================== */
+.Rtable--2cols > .Rtable-cell  { width: 50%; }
+.Rtable--3cols > .Rtable-cell  { width: 33.33%; }
+.Rtable--4cols > .Rtable-cell  { width: 25%; }
+.Rtable--5cols > .Rtable-cell  { width: 20%; }
+.Rtable--6cols > .Rtable-cell  { width: 16.6%; }
+.Rtable--7cols > .Rtable-cell  { width: 13.285%; }
+  
