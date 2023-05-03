@@ -104,7 +104,6 @@ const DayCell = ( { date, currentMonthIndex }: { date: Date, currentMonthIndex: 
                 <span>{date.getDate()}</span>
             </div>
             <div className="day-content">
-                
             </div>
         </div>
     )
