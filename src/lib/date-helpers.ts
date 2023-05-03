@@ -14,7 +14,7 @@ const MAX_CELL_COUNT_IN_MONTH = 42;
  * @param {number} month
  * @returns number
  */
-export const getMonthOffsets = (year, month) => {
+export const getMonthOffsets = (year: number, month: number) => {
     // Ranges from 0 to 6.
     // 0 is sunday.
     const dateObj = new Date(year, month - 1);
@@ -27,7 +27,7 @@ export const getMonthOffsets = (year, month) => {
     }
 }
 
-export const getNumberOfDaysForMonth = (year, month) => {
+export const getNumberOfDaysForMonth = (year: number, month: number) => {
     const dateObj = new Date(year, month - 1);
     return getDaysInMonth(dateObj);
 }
@@ -37,7 +37,7 @@ export const getNumberOfDaysForMonth = (year, month) => {
  * @param {Date} date 
  * @param {number} monthOffset 
  */
-export const addMonth = (date, monthOffset) => {
+export const addMonth = (date: number | Date, monthOffset: any) => {
     return add(date, { months: monthOffset })
 }
 
@@ -47,17 +47,17 @@ export const addMonth = (date, monthOffset) => {
  * @param {*} increment 
  * @returns 
  */
-export const addDays = (date, increment) => {
+export const addDays = (date: number | Date, increment: any) => {
     return add(date, { days: increment })
 }
  
 
-export const getAllDatesInMonth = (year, month) => {
+export const getAllDatesInMonth = (year: number, month: number) => {
     const dateObj = new Date(year, month - 1);
     const numberOfDaysInMonth = getDaysInMonth(dateObj);
     const dates = []
     for (let i = 0; i < numberOfDaysInMonth; i++) {
-        dates.push(add(dateObj, { day: i + 1}))
+        dates.push(add(dateObj, { days: i + 1}))
     }
 
     return dates;
@@ -69,7 +69,7 @@ export const getAllDatesInMonth = (year, month) => {
  * @param {number} range 
  * @returns 
  */
-export const getDatesInRange = (date, range) => {
+export const getDatesInRange = (date: number | Date, range: number) => {
     const dates = []
     for (let i = 0; i < range; i++) {
         dates.push(add(date, { days: i}))
